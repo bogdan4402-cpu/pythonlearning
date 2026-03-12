@@ -7,6 +7,6 @@ while True:
     c = random.choice(colors)
     time.sleep(1)
     print(f"{c}{random.choice(words)}\033[0m")
-    user_query.lower() == 'стоп'
-    break
+    if user_query.lower() == 'стоп':
+     break
     
