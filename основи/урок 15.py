@@ -9,16 +9,17 @@ while True:
     entry = (input("Скільки шагів ви пройшли за день? напишіть 'стоп' для підрахунку: "))
     if entry.lower() == "стоп":
         break
-    else: 
-        try:
+    try:
+        if float(entry) > 0:
             results.append(float(entry))
-        except ValueError: # Якщо замість введеного числа будуть букви програма не вилетить а напише уведіть число
-               print("Будь ласка уведіть вірне число")
-if len(results) > 0:
-    print("\033[91mВи не ввели жодних данних!")
-else:
+        else:
+            print("\033[91mВведіть число більше нуля!\033[0m")
+    except ValueError:
+        print("Будь-ласка увведіть вірне число")
+if results:
     print("Ви пройшли:", ((analyze_steps(results))))
+else:
+    print("Даних для підрахунку немає")
 
 
-    
     
