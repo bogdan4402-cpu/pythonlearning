@@ -8,3 +8,6 @@
 [Sun Mar 15 10:43:42 2026] 12333
 [Sun Mar 15 10:43:58 2026] & C:/Users/bodka/AppData/Local/Python/pythoncore-3.14-64/python.exe "c:/Users/bodka/OneDrive/Рабочий стол/все для навчання/основи/урок 17 частина 2.py"
 [Sun Mar 15 10:44:05 2026] 123
+[Sun Mar 15 10:54:23 2026] 13333333333
+[Sun Mar 15 10:57:57 2026] 1333
+[Sun Mar 15 10:57:58 2026] 3333
