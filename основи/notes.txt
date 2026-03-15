@@ -1,2 +1,10 @@
 Мій перший запис у файлі!
 Це мій додатковий запис![Sat Mar 14 22:05:03 2026] Це моя третя замітка
+[Sun Mar 15 10:35:55 2026] це моя четверта
+[Sun Mar 15 10:35:57 2026] та пята нотатка
+[Sun Mar 15 10:39:16 2026] Шоста нотатка
+[Sun Mar 15 10:43:11 2026] 123
+[Sun Mar 15 10:43:33 2026] сто& C:/Users/bodka/AppData/Local/Python/pythoncore-3.14-64/python.exe "c:/Users/bodka/OneDrive/Рабочий стол/все для навчання/основи/урок 17 частина 2.py"
+[Sun Mar 15 10:43:42 2026] 12333
+[Sun Mar 15 10:43:58 2026] & C:/Users/bodka/AppData/Local/Python/pythoncore-3.14-64/python.exe "c:/Users/bodka/OneDrive/Рабочий стол/все для навчання/основи/урок 17 частина 2.py"
+[Sun Mar 15 10:44:05 2026] 123
