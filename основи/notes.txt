@@ -3,3 +3,7 @@
 [Sun Mar 15 11:20:53 2026] ����
 [Sun Mar 15 11:25:02 2026] gggg
 [Sun Mar 15 11:25:05 2026] misha lebiga gavno
+[Tue Mar 17 18:31:23 2026]  source "/home/bogdan/уроки python/основи/venv/bin/activate"
+[Tue Mar 17 18:31:27 2026] 1'3333
+[Tue Mar 17 18:31:29 2026] 13333123213
+[Tue Mar 17 18:31:30 2026] 1488
