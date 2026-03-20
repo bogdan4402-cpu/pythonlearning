@@ -160,6 +160,7 @@ while True:
             if selected is None:
                 if board[row][col] != " ":
                     selected = (row, col)
+                    possible_moves = get_moves(board, row, col)       
             else:
                 old_row, old_col = selected
                 moves = get_moves(board, old_row, old_col)
@@ -167,6 +168,7 @@ while True:
                     board[row][col] = board[old_row][old_col]
                     board[old_row][old_col] = " "
                 selected = None
+                possible_moves = []
 
     for row in range(8):
         for col in range(8):
@@ -175,9 +177,13 @@ while True:
             else:
                 color = (111, 78, 55)
             pygame.draw.rect(screen, color, (col * 64, row * 64, 64, 64))
+
     if selected is not None:
         s_row, s_col = selected
         pygame.draw.rect(screen, (255, 255, 0), (s_col * 64, s_row * 64, 64, 64), 3)
+
+    for r, c in possible_moves:
+        pygame.draw.circle(screen, (100, 100, 100), (c*64+32, r*64+32), 7)
                          
     for row in range(8):
         for col in range(8):
