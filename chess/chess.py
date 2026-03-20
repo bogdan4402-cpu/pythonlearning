@@ -35,6 +35,7 @@ board = [
 
 selected = None
 possible_moves = []
+turn = "w"
 
 def get_moves(board, row, col):
     moves = []
@@ -158,7 +159,7 @@ while True:
             col = x // 64
             row = y // 64
             if selected is None:
-                if board[row][col] != " ":
+                if board[row][col] != " " and board[row][col].startswith(turn):
                     selected = (row, col)
                     possible_moves = get_moves(board, row, col)       
             else:
@@ -167,6 +168,7 @@ while True:
                 if (row, col) in moves:
                     board[row][col] = board[old_row][old_col]
                     board[old_row][old_col] = " "
+                    turn = "b" if turn == "w" else "w"
                 selected = None
                 possible_moves = []
 
