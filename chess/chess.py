@@ -34,7 +34,7 @@ board = [
 ]
 
 selected = None
-
+possible_moves = []
 
 def get_moves(board, row, col):
     moves = []
@@ -94,7 +94,57 @@ def get_moves(board, row, col):
                 break
             else:
                 break
-
+    #кінь
+    if piece in ["wN", "bN"]:
+        enemy = "b" if piece.startswith("w") else "w"
+        jumps = [(-2,-1),(-2,+1),(-1,-2),(-1,+2),
+                 (+1,-2),(+1,+2),(+2,-1),(+2,+1)]
+        for dr, dc in jumps:
+            r, c = row+dr, col+dc
+            if 0 <= r < 8 and 0 <= c < 8:
+                if board[r][c] == " " or board[r][c].startswith(enemy):
+                    moves.append((r, c))
+    
+    if piece in ["wB", 'bB']:
+        enemy = "b" if piece.startswith("w") else "w"
+        for dr, dc in [(-1, -1),(-1, +1),(+1,-1),(+1,+1)]:
+            r, c = row+dr, col+dc
+            while 0 <= r < 8 and 0 <= c < 8:
+                if board[r][c] == " ":
+                    moves.append((r, c))
+                elif board[r][c].startswith(enemy):
+                    moves.append((r, c))
+                    break
+                else:
+                    break
+                r += dr
+                c += dc
+    # ферзь
+    if piece in ["wQ", "bQ"]:
+        enemy = "b" if piece.startswith("w") else "w"
+        for dr,  dc in [(-1,0),(1,0),(0,-1),(0,1),
+                        (-1,-1),(-1,1),(1,-1),(1,1)]:
+            r, c = row+dr, col+dc
+            while 0 <= r < 8 and 0 <= c < 8:
+                if board[r][c] == " ":
+                    moves.append((r, c))
+                elif board[r][c].startswith(enemy):
+                    moves.append((r, c))
+                    break
+                else:
+                    break
+                r += dr
+                c += dc
+    #king
+    if piece in ["wK", "bK"]:
+        enemy = "b" if piece.startswith("w") else "w"
+        for dr, dc in [(-1,0),(1,0),(0,-1),(0,1),
+                       (-1,-1),(-1,1),(1,-1),(1,1)]:
+            r, c = row+dr, col+dc
+            if 0 <= r < 8 and 0 <= c < 8:
+              if board[r][c] == " " or board [r][c].startswith(enemy):
+                moves.append((r, c))
+        
     return moves
 
 
