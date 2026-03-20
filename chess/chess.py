@@ -125,7 +125,10 @@ while True:
             else:
                 color = (111, 78, 55)
             pygame.draw.rect(screen, color, (col * 64, row * 64, 64, 64))
-
+    if selected is not None:
+        s_row, s_col = selected
+        pygame.draw.rect(screen, (255, 255, 0), (s_col * 64, s_row * 64, 64, 64), 3)
+                         
     for row in range(8):
         for col in range(8):
             piece = board[row][col]
